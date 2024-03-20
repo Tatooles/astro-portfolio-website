@@ -14,3 +14,13 @@ Things got more interesting when decuding on a database provider and ORM. After 
 When it came to choosing an ORM, I was initially planning to go with Prisma, as that was a very popular option at the time of creating this app and paired well with Planetscale. Just before the point of adding the ORM, I found out about Drizzle ORM, a brand new Typescript ORM that also has specific integrations with Planetscale. I decided to give this new tool a shot and although it had it's bumps, I ultimately enjoyed working with it. I learned a lot from the challenge of using a tool for which documentation and other online resources were limited.
 
 Development started with create-next-app and then I added Tailwind and Prettier. After that came the basic structure of an application. I created a simple layout with a sidebar, header and footer. I countinued by adding the structure for what I thought the app should look like, a landing page, an exercieses page with a list of workouts, and the form modal to add a new workout. This was all stored locally with hard coded data as the auth and database had not been hooked up yet. Auth was the first big hurdle, adding Clerk and setting it up for local dev within the Next project was easy enough, but configuring the DNS to work in prod was an entirely different story.
+
+// New paragraph about setting up auth, had to talk with support, buy a new domain to get things to work.
+
+// Paragraph about Planetscale and Drizzle
+
+...
+
+...
+
+// Paragraph about next steps, maybe mention Planetscale issues
