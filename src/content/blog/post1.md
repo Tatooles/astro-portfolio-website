@@ -2,7 +2,7 @@
 title: "Creating Lifting Log"
 description: "My goal with Lifting Log was to create an application I could use on a daily basis for my lifting hobby, along with teaching myself about modern web development through..."
 pubDate: "Feb 22 2024"
-heroImage: "/barbell.png"
+heroImage: "../../assets/barbell.png"
 ---
 
 My goal with Lifting Log was to create an application I could use on a daily basis for my lifting hobby, along with teaching myself about modern web development through first hand experience.
