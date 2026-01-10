@@ -1,12 +1,11 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import { type StoreSchema } from "../../content/config";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import StoreItemLayout from "../../layouts/StoreItemLayout.astro";
 
 export async function getStaticPaths() {
   const itemEntries = await getCollection("store");
   return itemEntries.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
@@ -16,22 +15,20 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const item: StoreSchema = entry.data;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 
 <StoreItemLayout
-  title={item.title}
-  description={item.description}
-  heroImage={item.heroImage}
-  updatedDate={item.updatedDate}
-  heroImage={item.heroImage}
-  pricing={item.pricing}
-  oldPricing={item.oldPricing}
-  checkoutUrl={item.checkoutUrl}
-  badge={item.badge}
-  custom_link={item.custom_link}
-  custom_link_label={item.custom_link_label}
+  title={entry.data.title}
+  description={entry.data.description}
+  heroImage={entry.data.heroImage}
+  updatedDate={entry.data.updatedDate}
+  pricing={entry.data.pricing}
+  oldPricing={entry.data.oldPricing}
+  checkoutUrl={entry.data.checkoutUrl}
+  badge={entry.data.badge}
+  custom_link={entry.data.custom_link}
+  custom_link_label={entry.data.custom_link_label}
 >
   <Content />
 </StoreItemLayout>
