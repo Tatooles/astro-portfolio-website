@@ -8,7 +8,6 @@ export default defineConfig({
   site: 'https://astrofy-template.netlify.app',
   integrations: [mdx(), sitemap(), tailwind()],
   legacy: {
-    // Use legacy content collections to avoid Content Layer image path bugs
     collections: true
   }
 });
