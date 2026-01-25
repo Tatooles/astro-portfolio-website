@@ -9,6 +9,8 @@ My goal with Lifting Log was to create an application I could use on a daily
 basis for my lifting hobby, along with teaching myself about modern web
 development through first hand experience.
 
+## The Stack
+
 My first step was deciding what technology stack I wanted to use for the
 application. I already knew I wanted to user Next.JS. A framework growing in
 popularity in the industry, I was some thing I wanted to have experience with.
@@ -37,23 +39,37 @@ Planetscale. I decided to give this new tool a shot and although it had it's
 bumps, I ultimately enjoyed working with it. I learned a lot from the challenge
 of using a tool for which documentation and other online resources were limited.
 
+## Development
+
 Development started with create-next-app and then I added Tailwind and Prettier.
 After that came the basic structure of an application. I created a simple layout
 with a sidebar, header and footer. I countinued by adding the structure for what
 I thought the app should look like, a landing page, an exercieses page with a
 list of workouts, and the form modal to add a new workout. This was all stored
 locally with hard coded data as the auth and database had not been hooked up
-yet. Auth was the first big hurdle, adding Clerk and setting it up for local dev
+yet.
+
+### Auth
+
+Auth was the first big hurdle, adding Clerk and setting it up for local dev
 within the Next project was easy enough, but configuring the DNS to work in prod
-was an entirely different story.
+was an entirely different story. Eventually after an email to Clerk support and
+setting up another domain, and configuring Gmail auth in GCP, I had auth working
+and I had the userId I needed for my database queries.
 
-// New paragraph about setting up auth, had to talk with support, buy a new
-domain to get things to work.
+### Database
 
-// Paragraph about Planetscale and Drizzle
+After a bit of reasearch, I determined that Planetscale was a good option for my
+database. They had a solid free tier and good features. Drizzle also had solid
+support for Planetscale through the database-js driver. Updating the Drizzle
+config to connect to Planetscale was pretty straightfoward. I set up a simple
+table and query to verify that everything was working.
 
-...
-
-...
-
-// Paragraph about next steps, maybe mention Planetscale issues
+Next up was the fun part - hooking up the database to allow my application to
+function fully. Updating the Drizzle config to connect to Planetscale was pretty
+straightfoward. I set up a simple table and query to verify that everything was
+working. Then I had to actually create the tables and begin witing the queries.
+I added the rest of the necessary tables to hold the full data for a workout, as
+well as queries to create and fetch the workout. This allowed for the completion
+of two key features: workout creation and viewing a created workout, completing
+the MVP of this applcation.
