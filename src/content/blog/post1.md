@@ -12,24 +12,29 @@ development through first hand experience.
 ## The Stack
 
 My first step was deciding what technology stack I wanted to use for the
-application. I already knew I wanted to user Next.JS. A framework growing in
-popularity in the industry, I was some thing I wanted to have experience with.
+application. I already knew I wanted to use Next.js. A framework growing in
+popularity in the industry, it was something I wanted to have experience with.
 It was also likely the best choice for the application I was making. It would
 allow me to get the app up and running quickly, without much overhead, unlike
-more established frameworks such as Spring Boot or .NET which I also used at my
-day job. Hosting would also not be an issue with Vercel being the most seamless
+more heavier such as Spring Boot or .NET which I had experience with from my day
+job. Hosting would also not be an issue with Vercel being the most seamless
 option and providing a generous free tier. Typescript was another natural
 choice, it provides many advantages in terms of developer experience, as well as
 being the industry standard for modern web projects.
 
 Things got more interesting when decuding on a database provider and ORM. After
 considering a few options such as Supabase, Firebase, and AWS RDS, I decided on
-something more in the middle - Planetscale. Planetscale allows me better direct
+something more in the middle - Planetscale. Planetscale allows better direct
 access to the database than Supabase or Firebase as it is a MySQL database, but
-I wouldn't have to worry about the infrastructure like if I were using AWS
-directly. Planetscale also offers a generous free tier with 1 billion row reads,
-10 million row writes, and 5 GB of storage. This would be more than enough
-barring a large influx of users.
+I wouldn't have to worry about the infrastructure unlike using AWS directly.
+Planetscale also offered a generous free tier with 1 billion row reads, 10
+million row writes, and 5 GB of storage. This would be more than enough barring
+a large influx of users.
+
+For auth, I decided to go with Clerk. I figured the setup would be relatively
+simple taking advantage of their dev-friendly Next.js SDK and and an easy quick
+start in the docs. They also have good integration with auth methods such as
+Google, Apple, Github, and standard username + password.
 
 When it came to choosing an ORM, I was initially planning to go with Prisma, as
 that was a very popular option at the time of creating this app and paired well
@@ -43,9 +48,8 @@ of using a tool for which documentation and other online resources were limited.
 
 Development started with create-next-app and then I added Tailwind and Prettier.
 After that came the basic structure of an application. I created a simple layout
-with a sidebar, header and footer. I countinued by adding the structure for what
-I thought the app should look like, a landing page, an exercieses page with a
-list of workouts, and the form modal to add a new workout. This was all stored
+with a sidebar, header and footer, landing page, an exercieses page with a list
+of workouts, and the form modal to add a new workout. This was all stored
 locally with hard coded data as the auth and database had not been hooked up
 yet.
 
@@ -54,16 +58,10 @@ yet.
 Auth was the first big hurdle, adding Clerk and setting it up for local dev
 within the Next project was easy enough, but configuring the DNS to work in prod
 was an entirely different story. Eventually after an email to Clerk support and
-setting up another domain, and configuring Gmail auth in GCP, I had auth working
-and I had the userId I needed for my database queries.
+setting up another domain, then configuring Gmail auth in GCP, I had auth
+working and I had the userId I needed for my database queries.
 
 ### Database
-
-After a bit of reasearch, I determined that Planetscale was a good option for my
-database. They had a solid free tier and good features. Drizzle also had solid
-support for Planetscale through the database-js driver. Updating the Drizzle
-config to connect to Planetscale was pretty straightfoward. I set up a simple
-table and query to verify that everything was working.
 
 Next up was the fun part - hooking up the database to allow my application to
 function fully. Updating the Drizzle config to connect to Planetscale was pretty
