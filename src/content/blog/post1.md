@@ -8,7 +8,7 @@ heroImage: "../../assets/barbell.png"
 
 My goal with Lifting Log was to create an application I could use on a daily
 basis for my lifting hobby, along with teaching myself about modern web
-development through first hand experience.
+development through firsthand experience.
 
 ## Current State
 
@@ -43,21 +43,21 @@ queries for better performance as the dataset grew with daily use.
 The app continues to be actively developed based on my own needs as a daily
 user, ensuring features are practical and well-tested in real-world scenarios.
 
-[View the live app →](https://lifting-log.vercel.app) |
+[View the live app →](https://liftinglog.app) |
 [See the code on GitHub →](https://github.com/Tatooles/next-fitness-tracker)
 
 ## The Stack
 
-My first step was deciding what technology stack I wanted to use for the
-application. I already knew I wanted to use Next.js. A framework growing in
-popularity in the industry, it was something I wanted to have experience with.
-It was also likely the best choice for the application I was making. It would
-allow me to get the app up and running quickly, without much overhead, unlike
-more heavier such as Spring Boot or .NET which I had experience with from my day
-job. Hosting would also not be an issue with Vercel being the most seamless
-option and providing a generous free tier. Typescript was another natural
-choice, it provides many advantages in terms of developer experience, as well as
-being the industry standard for modern web projects.
+My first step in creating a lifting tracking app was deciding what technology
+stack I wanted to use. I already knew I wanted to use Next.js. A framework
+growing in popularity in the industry, it was something I wanted to have
+experience with. It was also likely the best choice for the application I was
+making. It would allow me to get the app up and running quickly, without much
+overhead, unlike heavier frameworks such as Spring Boot or .NET which I had
+experience with from my day job. Hosting would also not be an issue with Vercel
+being the most seamless option and providing a generous free tier. TypeScript
+was another natural choice, as it provides many advantages in terms of developer
+experience, as well as being the industry standard for modern web projects.
 
 Things got more interesting when deciding on a database provider and ORM. After
 considering a few options such as Supabase, Firebase, and AWS RDS, I decided on
@@ -69,15 +69,15 @@ million row writes, and 5 GB of storage. This would be more than enough barring
 a large influx of users.
 
 For auth, I decided to go with Clerk. I figured the setup would be relatively
-simple taking advantage of their dev-friendly Next.js SDK and and an easy quick
+simple taking advantage of their dev-friendly Next.js SDK and an easy quick
 start in the docs. They also have good integration with auth methods such as
-Google, Apple, Github, and standard username + password.
+Google, Apple, GitHub, and standard username + password.
 
 When it came to choosing an ORM, I was initially planning to go with Prisma, as
 that was a very popular option at the time of creating this app and paired well
 with Planetscale. Just before the point of adding the ORM, I found out about
-Drizzle ORM, a brand new Typescript ORM that also has specific integrations with
-Planetscale. I decided to give this new tool a shot and although it had it's
+Drizzle ORM, a brand new TypeScript ORM that also has specific integrations with
+Planetscale. I decided to give this new tool a shot and although it had its
 bumps, I ultimately enjoyed working with it. I learned a lot from the challenge
 of using a tool for which documentation and other online resources were limited.
 
@@ -85,9 +85,9 @@ of using a tool for which documentation and other online resources were limited.
 
 Development started with create-next-app and then I added Tailwind and Prettier.
 After that came the basic structure of an application. I created a simple layout
-with a sidebar, header and footer, landing page, an exercieses page with a list
+with a sidebar, header and footer, landing page, an exercises page with a list
 of workouts, and the form modal to add a new workout. This was all stored
-locally with hard coded data as the auth and database had not been hooked up
+locally with hard-coded data as the auth and database had not been hooked up
 yet.
 
 ### Auth
@@ -102,7 +102,7 @@ working and I had the userId I needed for my database queries.
 
 Next up was the fun part - hooking up the database to allow my application to
 function fully. Updating the Drizzle config to connect to Planetscale was pretty
-straightfoward. I set up a simple table and query to verify that everything was
+straightforward. I set up a simple table and query to verify that everything was
 working. Then I had to actually create the tables and begin writing the queries.
 Over the course of several pull requests, I built out the core functionality:
 implementing the add workout query, followed by get workouts, then delete and
@@ -129,12 +129,12 @@ Working with newer tools like Drizzle ORM, where Stack Overflow answers were
 scarce and documentation was still evolving, forced me to develop stronger
 problem-solving skills and read source code directly when answers weren't
 readily available. Implementing authentication was also a major learning
-experience, as it was my first time working deeply with auth in production - I
-learned about OAuth flows, session management, and securing routes. The
-challenges I faced - from DNS configuration issues with Clerk to understanding
-how to properly structure database queries - were the kinds of real-world
-problems that tutorials often gloss over but are crucial to building production
-applications.
+experience, as it was my first time setting up auth in an application from
+scratch - I learned about OAuth flows, session management, and securing routes.
+The challenges I faced - from DNS configuration issues with Clerk to
+understanding how to properly structure database queries - were the kinds of
+real-world problems that tutorials often gloss over but are crucial to building
+production applications.
 
 Most importantly, I learned that shipping something functional is far more
 valuable than endlessly planning the perfect architecture. By focusing on the
