@@ -5,14 +5,30 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+    <div class="text-3xl w-full font-bold">Experience</div>
   </div>
 
-  <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Software Engineer at Sentry Insurance"
+      subtitle="From July 2025 to present"
+    >
+    </TimeLineElement>
+    <TimeLineElement
+      title="Software Developer at Sentry Insurance"
+      subtitle="From May 2022 to July 2025"
+    >
+    </TimeLineElement>
+    <TimeLineElement
+      title="Associate Software Developer at Sentry Insurance"
+      subtitle="From May 2021 to May 2022"
+    >
+    </TimeLineElement>
+    <TimeLineElement
+      title="Support Specialist Supervisor at DoIT Help Desk"
+      subtitle="From May 2019 to May 2021"
+    >
+    </TimeLineElement>
   </div>
 
   <div class="mb-5">
@@ -31,62 +47,96 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
-
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Software Engineer at Sentry Insurance"
-      subtitle="From May 2022 to present"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Associate Software Developer at Sentry Insurance"
-      subtitle="From May 2021 to May 2022"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Support Specialist Supervisor at DoIT Help Desk"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-  </div>
-
-  <div class="mb-5">
     <div class="text-3xl w-full font-bold">Certifications</div>
   </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul>
+  <div class="mb-10">
+    <!-- Front-End -->
+    <div class="mb-6">
+      <div class="text-xl font-semibold mb-2">Front-End</div>
+      <ul class="list-disc md:columns-4 columns-2 mx-6">
+        <li>React.js</li>
+        <li>Next.js</li>
+        <li>Angular</li>
+        <li>Vue.js</li>
+        <li>TypeScript</li>
+        <li>Tailwind CSS</li>
+        <li>React Native</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SASS</li>
+        <li>Three.js</li>
+      </ul>
+    </div>
+
+    <!-- Back-End -->
+    <div class="mb-6">
+      <div class="text-xl font-semibold mb-2">Back-End</div>
+      <ul class="list-disc md:columns-4 columns-2 mx-6">
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>Python</li>
+        <li>C#</li>
+        <li>C</li>
+        <li>VB.NET</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>.NET Framework</li>
+      </ul>
+    </div>
+
+    <!-- Databases -->
+    <div class="mb-6">
+      <div class="text-xl font-semibold mb-2">Databases</div>
+      <ul class="list-disc md:columns-4 columns-2 mx-6">
+        <li>Microsoft SQL Server</li>
+        <li>MySQL</li>
+        <li>SQLite</li>
+        <li>Turso</li>
+        <li>Drizzle ORM</li>
+      </ul>
+    </div>
+    
+    <!-- DevOps & Tools -->
+    <div class="mb-6">
+      <div class="text-xl font-semibold mb-2">DevOps & Tools</div>
+      <ul class="list-disc md:columns-4 columns-2 mx-6">
+        <li>Dynatrace</li>
+        <li>ELK Stack</li>
+        <li>Jira</li>
+        <li>SoapUI</li>
+        <li>Linux</li>
+        <li>Google Analytics</li>
+      </ul>
+    </div>
+
+    <!-- Additional Tools -->
+    <div class="mb-6">
+      <div class="text-xl font-semibold mb-2">Additional Tools</div>
+      <ul class="list-disc md:columns-4 columns-2 mx-6">
+        <li>Adobe Creative Suite</li>
+        <li>Video Editing</li>
+        <li>Microsoft Office</li>
+        <li>Cherwell Service Management</li>
+      </ul>
+    </div>
+
+    <!-- Soft Skills & Languages -->
+    <div class="mb-6">
+      <div class="text-xl font-semibold mb-2">Soft Skills & Languages</div>
+      <ul class="list-disc md:columns-4 columns-2 mx-6">
+        <li>Leadership</li>
+        <li>Communication</li>
+        <li>Public Speaking</li>
+        <li>Technical Support</li>
+        <li>Customer Support</li>
+        <li>Spanish</li>
+      </ul>
+    </div>
+  </div>
 </BaseLayout>
