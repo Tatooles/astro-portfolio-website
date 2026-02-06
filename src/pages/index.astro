@@ -13,49 +13,51 @@ const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-5xl font-bold">Kevin Tatooles</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer</div>
-    <div class="py-2">
-      <text class="text-lg">
-        Software engineer with a focus on web development. Background in tech and finance. Outside of work, I lift, pole vault, and speedcube.
-      </text>
+  <div class="pb-8 mt-5">
+    <p class="text-lg leading-relaxed text-base-content/80">
+      Full stack software engineer at Sentry Insurance working on customer-facing applications. Background in tech and finance. Outside of work, I lift, pole vault, and speedcube.
+    </p>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 flex items-center gap-3">
+      <span class="h-8 w-1 bg-primary rounded-full"></span>
+      My latest projects {"</>"}
     </div>
   </div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">My latest projects {"</>"}</div>
+  <div class="space-y-4">
+    <HorizontalCard
+      title="Lifting Log"
+      img={barbell}
+      desc="A full stack, authenticated web application to track lifting progress. Created with Next.js, Typescript, TailwindCSS, Clerk auth, and Drizzle ORM with Turso."
+      url="https://liftinglog.app"
+      badge="NEW"
+    />
+    <HorizontalCard
+      title="Workout Generator"
+      img={openrouter}
+      desc="This application utilizes the OpenRouter API to generate workout routines for the user. Users can input their workout preferences, selecting from preset splits like push/pull/legs, body part splits, or specific muscles to target. Additionally, they can include notes for further customization."
+      url="https://workout-generator-zeta.vercel.app"
+    />
+    <HorizontalCard
+      title="Meeting Cost Calculator"
+      img={vue}
+      desc="A Vue3 application created to help users better understand the financial implications of their meetings. By inputting the salaries of participants and either setting a meeting duration or utilizing a timer, users can gain insights into the cost of their time spent in meetings."
+      url="#"
+    />
   </div>
 
-  <HorizontalCard
-    title="Lifting Log"
-    img={barbell}
-    desc="A full stack, authenticated web application to track lifting progress. Created with Next.js, Typescript, TailwindCSS, Clerk auth, and Drizzle ORM with Turso."
-    url="https://liftinglog.app"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Workout Generator"
-    img={openrouter}
-    desc="This application utilizes the OpenRouter API to generate workout routines for the user. Users can input their workout preferences, selecting from preset splits like push/pull/legs, body part splits, or specific muscles to target. Additionally, they can include notes for further customization."
-    url="https://workout-generator-zeta.vercel.app"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Meeting Cost Calculator"
-    img={vue}
-    desc="A Vue3 application created to help users better understand the financial implications of their meetings. By inputting the salaries of participants and either setting a meeting duration or utilizing a timer, users can gain insights into the cost of their time spent in meetings."
-    url="#"
-  />
-
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10 flex items-center gap-3">
+      <span class="h-8 w-1 bg-primary rounded-full"></span>
+      Latest from blog
+    </div>
   </div>
 
-  {
-    last_posts.map((post) => (
-      <>
+  <div class="space-y-4">
+    {
+      last_posts.map((post) => (
         <HorizontalCard
           title={post.data.title}
           img={post.data.heroImage}
@@ -64,8 +66,7 @@ const last_posts = posts.slice(0, 3);
           target="_self"
           badge={post.data.badge}
         />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+      ))
+    }
+  </div>
 </BaseLayout>

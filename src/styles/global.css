@@ -1,3 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: rgba(20, 184, 166, 0.3);
+    color: #e2e8f0;
+}
+
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
+}
+
+/* Prose overrides for dark theme */
+.prose {
+    --tw-prose-body: #cbd5e1;
+    --tw-prose-headings: #f1f5f9;
+    --tw-prose-links: #14b8a6;
+    --tw-prose-bold: #f1f5f9;
+    --tw-prose-counters: #94a3b8;
+    --tw-prose-bullets: #475569;
+    --tw-prose-hr: #334155;
+    --tw-prose-quotes: #e2e8f0;
+    --tw-prose-quote-borders: #14b8a6;
+    --tw-prose-code: #e2e8f0;
+    --tw-prose-pre-code: #e2e8f0;
+    --tw-prose-pre-bg: #1e293b;
 }

@@ -5,7 +5,10 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
+    <div class="text-3xl w-full font-bold flex items-center gap-3">
+      <span class="h-8 w-1 bg-primary rounded-full"></span>
+      Experience
+    </div>
   </div>
 
   <div class="time-line-container mb-10">
@@ -32,7 +35,10 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
+    <div class="text-3xl w-full font-bold flex items-center gap-3">
+      <span class="h-8 w-1 bg-primary rounded-full"></span>
+      Education
+    </div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
@@ -47,96 +53,102 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
+    <div class="text-3xl w-full font-bold flex items-center gap-3">
+      <span class="h-8 w-1 bg-primary rounded-full"></span>
+      Certifications
+    </div>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
+    <div class="text-3xl w-full font-bold flex items-center gap-3">
+      <span class="h-8 w-1 bg-primary rounded-full"></span>
+      Skills
+    </div>
   </div>
 
-  <div class="mb-10">
+  <div class="mb-10 space-y-6">
     <!-- Front-End -->
-    <div class="mb-6">
-      <div class="text-xl font-semibold mb-2">Front-End</div>
-      <ul class="list-disc md:columns-4 columns-2 mx-6">
-        <li>React.js</li>
-        <li>Next.js</li>
-        <li>Angular</li>
-        <li>Vue.js</li>
-        <li>TypeScript</li>
-        <li>Tailwind CSS</li>
-        <li>React Native</li>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>SASS</li>
-        <li>Three.js</li>
-      </ul>
+    <div>
+      <div class="text-lg font-semibold mb-3 text-primary/90">Front-End</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">React.js</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Next.js</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Angular</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Vue.js</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">TypeScript</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Tailwind CSS</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">React Native</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">JavaScript</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">HTML</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">CSS</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">SASS</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Three.js</span>
+      </div>
     </div>
 
     <!-- Back-End -->
-    <div class="mb-6">
-      <div class="text-xl font-semibold mb-2">Back-End</div>
-      <ul class="list-disc md:columns-4 columns-2 mx-6">
-        <li>Java</li>
-        <li>Spring Boot</li>
-        <li>Python</li>
-        <li>C#</li>
-        <li>C</li>
-        <li>VB.NET</li>
-        <li>Node.js</li>
-        <li>Express.js</li>
-        <li>.NET Framework</li>
-      </ul>
+    <div>
+      <div class="text-lg font-semibold mb-3 text-primary/90">Back-End</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Java</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Spring Boot</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Python</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">C#</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">C</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">VB.NET</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Node.js</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Express.js</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">.NET Framework</span>
+      </div>
     </div>
 
     <!-- Databases -->
-    <div class="mb-6">
-      <div class="text-xl font-semibold mb-2">Databases</div>
-      <ul class="list-disc md:columns-4 columns-2 mx-6">
-        <li>Microsoft SQL Server</li>
-        <li>MySQL</li>
-        <li>SQLite</li>
-        <li>Turso</li>
-        <li>Drizzle ORM</li>
-      </ul>
+    <div>
+      <div class="text-lg font-semibold mb-3 text-primary/90">Databases</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Microsoft SQL Server</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">MySQL</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">SQLite</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Turso</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Drizzle ORM</span>
+      </div>
     </div>
     
     <!-- DevOps & Tools -->
-    <div class="mb-6">
-      <div class="text-xl font-semibold mb-2">DevOps & Tools</div>
-      <ul class="list-disc md:columns-4 columns-2 mx-6">
-        <li>Dynatrace</li>
-        <li>ELK Stack</li>
-        <li>Jira</li>
-        <li>SoapUI</li>
-        <li>Linux</li>
-        <li>Google Analytics</li>
-      </ul>
+    <div>
+      <div class="text-lg font-semibold mb-3 text-primary/90">DevOps & Tools</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Dynatrace</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">ELK Stack</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Jira</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">SoapUI</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Linux</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Google Analytics</span>
+      </div>
     </div>
 
     <!-- Additional Tools -->
-    <div class="mb-6">
-      <div class="text-xl font-semibold mb-2">Additional Tools</div>
-      <ul class="list-disc md:columns-4 columns-2 mx-6">
-        <li>Adobe Creative Suite</li>
-        <li>Video Editing</li>
-        <li>Microsoft Office</li>
-        <li>Cherwell Service Management</li>
-      </ul>
+    <div>
+      <div class="text-lg font-semibold mb-3 text-primary/90">Additional Tools</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Adobe Creative Suite</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Video Editing</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Microsoft Office</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Cherwell Service Management</span>
+      </div>
     </div>
 
     <!-- Soft Skills & Languages -->
-    <div class="mb-6">
-      <div class="text-xl font-semibold mb-2">Soft Skills & Languages</div>
-      <ul class="list-disc md:columns-4 columns-2 mx-6">
-        <li>Leadership</li>
-        <li>Communication</li>
-        <li>Public Speaking</li>
-        <li>Technical Support</li>
-        <li>Customer Support</li>
-        <li>Spanish</li>
-      </ul>
+    <div>
+      <div class="text-lg font-semibold mb-3 text-primary/90">Soft Skills & Languages</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Leadership</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Communication</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Public Speaking</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Technical Support</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Customer Support</span>
+        <span class="badge badge-outline border-base-300 bg-base-200 text-base-content/90 py-3 px-4">Spanish</span>
+      </div>
     </div>
   </div>
 </BaseLayout>

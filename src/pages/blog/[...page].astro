@@ -15,39 +15,39 @@ const { page }: any = Astro.props;
 
 <BaseLayout title="Blog" sideBarActiveItemID="blog">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Blog</div>
+    <div class="text-3xl w-full font-bold flex items-center gap-3">
+      <span class="h-8 w-1 bg-primary rounded-full"></span>
+      Blog
+    </div>
   </div>
 
   {
     page.data.length === 0 ? (
-      <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full">
-        <p class="font-bold">Sorry!</p>
-        <p>There are no blog posts to show at the moment. Check back later!</p>
+      <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full rounded-r-lg">
+        <p class="font-bold text-white">Sorry!</p>
+        <p class="text-base-content/70">There are no blog posts to show at the moment. Check back later!</p>
       </div>
     ) : (
-      <ul>
+      <div class="space-y-4">
         {page.data.map((post: any) => (
-          <>
-            <HorizontalCard
-              title={post.data.title}
-              img={post.data.heroImage}
-              desc={post.data.description}
-              url={"/blog/" + createSlug(post.data.title, post.id)}
-              target="_self"
-              badge={post.data.badge}
-              tags={post.data.tags}
-            />
-            <div class="divider my-0" />
-          </>
+          <HorizontalCard
+            title={post.data.title}
+            img={post.data.heroImage}
+            desc={post.data.description}
+            url={"/blog/" + createSlug(post.data.title, post.id)}
+            target="_self"
+            badge={post.data.badge}
+            tags={post.data.tags}
+          />
         ))}
-      </ul>
+      </div>
     )
   }
 
   <div class="flex justify-between">
     {
       page.url.prev ? (
-        <a href={page.url.prev} class="btn btn-ghost my-10 mx-5">
+        <a href={page.url.prev} class="btn btn-ghost my-10 mx-5 hover:text-primary">
           {" "}
           <svg
             class="h-6 w-6 fill-current md:h-8 md:w-8"
@@ -66,7 +66,7 @@ const { page }: any = Astro.props;
     }
     {
       page.url.next ? (
-        <a href={page.url.next} class="btn btn-ghost my-10 mx-5">
+        <a href={page.url.next} class="btn btn-ghost my-10 mx-5 hover:text-primary">
           Older Posts{" "}
           <svg
             class="h-6 w-6 fill-current md:h-8 md:w-8"

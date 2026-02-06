@@ -10,43 +10,44 @@ import chessKnight from "../assets/chess-knight.svg";
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5 flex items-center gap-3">
+      <span class="h-8 w-1 bg-primary rounded-full"></span>
+      Projects
+    </div>
   </div>
 
-  <HorizontalCard
-    title="Lifting Log"
-    img={barbell}
-    desc="A full stack, authenticated web application to track lifting progress. Created with Next.js, Typescript, TailwindCSS, Clerk auth, and Drizzle ORM with Turso."
-    url="https://liftinglog.app"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Workout Generator"
-    img={openrouter}
-    desc="This application utilizes the OpenRouter API to generate workout routines for the user. Users can input their workout preferences, selecting from preset splits like push/pull/legs, body part splits, or specific muscles to target. Additionally, they can include notes for further customization."
-    url="https://workout-generator-zeta.vercel.app"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Meeting Cost Calculator"
-    img={vue}
-    desc="A Vue3 application created to help users better understand the financial implications of their meetings. By inputting the salaries of participants and either setting a meeting duration or utilizing a timer, users can gain insights into the cost of their time spent in meetings."
-    url="https://meeting-calculator.netlify.app/"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Sports Stats Twitter Bot"
-    img={xTwitter}
-    desc="A Twitter bot built with Python that retrieves NBA player statistics on request. Users mention the bot with a player's name, season (1996-present or career), and desired stats to receive per-game averages for metrics ranging from basic stats to advanced analytics."
-    url="https://x.com/sportstatsgenie"
-    badge="INACTIVE"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="React Chess"
-    img={chessKnight}
-    desc="A chess game built with React, TypeScript, and Tailwind CSS that allows users to play against a computer opponent. The engine logic runs on an AWS Lambda function via a separate API, processing each move and returning the computer's response."
-    url="https://play-chess-online.netlify.app/"
-  />
+  <div class="space-y-4">
+    <HorizontalCard
+      title="Lifting Log"
+      img={barbell}
+      desc="A full stack, authenticated web application to track lifting progress. Created with Next.js, Typescript, TailwindCSS, Clerk auth, and Drizzle ORM with Turso."
+      url="https://liftinglog.app"
+      badge="NEW"
+    />
+    <HorizontalCard
+      title="Workout Generator"
+      img={openrouter}
+      desc="This application utilizes the OpenRouter API to generate workout routines for the user. Users can input their workout preferences, selecting from preset splits like push/pull/legs, body part splits, or specific muscles to target. Additionally, they can include notes for further customization."
+      url="https://workout-generator-zeta.vercel.app"
+    />
+    <HorizontalCard
+      title="Meeting Cost Calculator"
+      img={vue}
+      desc="A Vue3 application created to help users better understand the financial implications of their meetings. By inputting the salaries of participants and either setting a meeting duration or utilizing a timer, users can gain insights into the cost of their time spent in meetings."
+      url="https://meeting-calculator.netlify.app/"
+    />
+    <HorizontalCard
+      title="Sports Stats Twitter Bot"
+      img={xTwitter}
+      desc="A Twitter bot built with Python that retrieves NBA player statistics on request. Users mention the bot with a player's name, season (1996-present or career), and desired stats to receive per-game averages for metrics ranging from basic stats to advanced analytics."
+      url="https://x.com/sportstatsgenie"
+      badge="INACTIVE"
+    />
+    <HorizontalCard
+      title="React Chess"
+      img={chessKnight}
+      desc="A chess game built with React, TypeScript, and Tailwind CSS that allows users to play against a computer opponent. The engine logic runs on an AWS Lambda function via a separate API, processing each move and returning the computer's response."
+      url="https://play-chess-online.netlify.app/"
+    />
+  </div>
 </BaseLayout>

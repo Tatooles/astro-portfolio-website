@@ -2,15 +2,15 @@
 const { title, subtitle } = Astro.props;
 ---
 
-<div class="flex">
+<div class="flex group">
   <div class="education__time">
-    <span class="w-4 h-4 bg-primary block rounded-full mt-1"></span>
-    <span class="education__line bg-primary block h-full w-[2px] translate-x-[7px]"></span>
+    <span class="w-4 h-4 bg-primary block rounded-full mt-1 ring-4 ring-primary/20"></span>
+    <span class="education__line bg-primary/30 block h-full w-[2px] translate-x-[7px]"></span>
   </div>
-  <div class="experience__data bd-grid px-5">
-    <h3 class="font-semibold mb-1">{title}</h3>
-    <span class="font-light text-sm">{subtitle}</span>
-    <p class="my-2 text-justify">
+  <div class="experience__data bd-grid px-5 pb-2">
+    <h3 class="font-semibold mb-1 text-white">{title}</h3>
+    <span class="font-light text-sm text-primary/80">{subtitle}</span>
+    <p class="my-2 text-justify text-base-content/70">
       <slot />
     </p>
   </div>

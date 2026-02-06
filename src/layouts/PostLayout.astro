@@ -23,28 +23,28 @@ const displayDate = dayjs(pubDate).format("ll");
 <BaseLayout title={title} description={description} image={heroImage}, ogType="article">
   <main class="md:flex md:justify-center">
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
-      {heroImage && <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />}
-      <h1 class="title my-2 text-4xl font-bold">{title}</h1>
-      {pubDate && <time>{displayDate}</time>}
+      {heroImage && <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6 rounded-lg" />}
+      <h1 class="title my-2 text-4xl font-bold text-white">{title}</h1>
+      {pubDate && <time class="text-base-content/60">{displayDate}</time>}
       <br />
-      {badge && <div class="badge badge-secondary my-1">{badge}</div>}
+      {badge && <div class="badge badge-secondary badge-sm my-1 font-medium">{badge}</div>}
       {
         tags &&
           tags.map((tag) => (
-            <a href={`/blog/tag/${tag}`} class="badge badge-outline ml-2 no-underline">
+            <a href={`/blog/tag/${tag}`} class="badge badge-outline badge-sm ml-2 no-underline border-primary/30 text-primary/80 hover:bg-primary/10">
               {tag}
             </a>
           ))
       }
       {
         updatedDate && (
-          <div>
+          <div class="text-base-content/60">
             {" "}
             Last updated on <time>{updatedDate}</time>{" "}
           </div>
         )
       }
-      <div class="divider my-2"></div>
+      <div class="divider my-2 before:bg-base-300 after:bg-base-300"></div>
       <slot />
     </article>
   </main>
